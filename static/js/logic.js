@@ -24,6 +24,7 @@ d3.json(queryUrl).then(function (data) {
         onEachFeature: function (feature, layer) {
             layer.bindPopup(`<h3>Place:</h3> ${feature.properties.place} <br/> 
                             <h3>Magnitude:</h3> ${feature.properties.mag} <br/>
+                            <h3>Depth:</h3> ${feature.geometry.coordinates[2]} <br/>
                             <h3>Time:</h3> ${new Date(feature.properties.time)}`);
         }
     });
