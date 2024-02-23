@@ -52,7 +52,7 @@ d3.json(queryUrl).then(function (data) {
         
         for (var i = 0; i < depths.length; i++) {
             div.innerHTML +=
-                '<i style="background:' + getColor(depths[i]) + '"></i> ' +
+            `<i style="background: ${getColor(depths[i])}; color: ${getColor(depths[i])} ">" "</i> ` +
                 depths[i] + (depths[i+1] ? '&ndash;' + depths[i + 1] : '+') + '<br>';
                 // console.log(getColor(depths[i]))
                 // console.log(depths[i])
